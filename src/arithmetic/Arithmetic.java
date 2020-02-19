@@ -13,6 +13,7 @@ import java.util.Scanner;
  * execute the code check the output
  * @author sivagamasrinivasan
  * date 02/19
+ * Ripandeep Singh Kang 
  */
 public class Arithmetic 
 {
