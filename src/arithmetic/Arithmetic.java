@@ -23,15 +23,39 @@ public class Arithmetic
     public static void main(String[] args) 
     {
        
-        ArithmeticBase r= new ArithmeticBase();
-        double result = r.calculate(1,2);
-        System.out.println("result :" +result); 
+        
+      ArithmeticBase c1 =ArithmeticBase.PLUS;
+      ArithmeticBase c2 =ArithmeticBase.MINUS;       
+      ArithmeticBase c3 =ArithmeticBase.TIMES;
+      ArithmeticBase c4 =ArithmeticBase.DIVIDE;
+      
+      Scanner sc =new Scanner(System.in);
+      System.out.println("Enter 1 for addition, 2 for subtraction, 3 for multiply, 4 for divide");
+        System.out.println("enter number between 1 and 4");
+        int s= sc.nextInt();
+        switch (s) 
+        {
+            case 1:
+                System.out.println(c1.addition());
+                break;
+            case 2:
+                System.out.println(c2.subtraction());
+                break;
+            case 3:
+                System.out.println(c3.times());
+                break;
+            case 4:
+                System.out.println(c4.divide());
+                break;
+            default:
+                System.out.println("Invaild Choice");
+                
     
     }
 
 
 
-
+    }
 
 }
 

@@ -13,27 +13,42 @@ import java.util.Scanner;
  * @author sivagamasrinivasan
  * date 02/19
  */
-public class ArithmeticBase 
+public enum ArithmeticBase 
 {
- public double x,y;
-    double calculate(double x, double y) 
-        {
-        Scanner sc =new Scanner(System.in);
-        System.out.println("enter String");
-        String s= sc.next();
-        switch (s.toUpperCase()) 
-        {
-            case "PLUS":
-                return x + y;
-            case "MINUS":
-                return x - y;
-            case "TIMES":
-                return x * y;
-            case "DIVIDE":
-                return x / y;
-            default:
-                throw new AssertionError("Unknown operations " + this);
-        }
+    PLUS("PLUS"),            // it is a  variable with value 1 and name pennhy
+    MINUS("MINUS"),
+    TIMES("TIMES"),
+    DIVIDE("QUARTER");
+    
+    private String name;
+    private int x = 1;
+    private int y = 2;
+    private ArithmeticBase(String name)    // constructor is used to access enum variables
+    {
+        this.name=name;
     }
+    public String getName()
+    {
+        return name;
+    }
+    public int addition() 
+    {
+        return  x+y;
+    }
+     public int subtraction() 
+    {
+        return  x-y;
+    }
+      public int times() 
+    {
+        return  x*y;
+    }
+       public int divide() 
+    {
+        return  x/y;
+    }
+ 
+        }
+    
    
-}
+
